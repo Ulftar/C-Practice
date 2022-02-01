@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PracticeCycle
+{
+    class Program
+    {
+        static void Main(string[] args) // Вывести на экран все целые числа от a до b, кратные некоторому числу c.
+        {
+            while (true)
+            {
+                Console.WriteLine("Введите число A");
+                int a = int.Parse(Console.ReadLine());
+                Console.WriteLine("Введите число B");
+                int b = int.Parse(Console.ReadLine());
+
+                if (a > b) // Проверка диапазона чисел.
+                {
+                    Console.WriteLine("Число A должно быть меньше числа B");
+                    continue;
+                }
+                Console.WriteLine("Введите число C");
+                int c = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Числа в диапазоне от " + a + " до " + b + ", кратные " + c + ":");
+
+                int result;
+                for (result = a; result <= b; result++)
+                {
+                    if (result % c == 0)
+                    {
+                        Console.WriteLine(result);
+                    }
+                }
+                Console.ReadKey();
+                break;
+            }
+        }
+    }
+}
