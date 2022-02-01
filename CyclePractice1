@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PracticeCycle
+{
+    class Program
+    {
+        static void Main(string[] args) // Вывести числа кратные трём в диапазоне от 100 до 200.
+        {
+            int i;
+            for (i = 100; i <= 200; i++) 
+            {
+                if (i % 3 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
